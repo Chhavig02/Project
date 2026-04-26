@@ -1,0 +1,330 @@
+/* =============================================
+   ROOTS & ROUTES — Global CSS
+   DECO7140 A2 Research & Proposal
+   Design System Tokens & Shared Components
+   ============================================= */
+
+:root {
+  /* --- Colour System --- */
+  --clr-bg:          #F5F0E8;       /* warm parchment */
+  --clr-bg-alt:      #EDE7D9;       /* slightly deeper parchment */
+  --clr-surface:     #FDFAF5;       /* near-white surface */
+  --clr-primary:     #1C2B3A;       /* deep navy */
+  --clr-accent:      #C4501A;       /* terracotta / spice */
+  --clr-accent-warm: #E8903A;       /* saffron */
+  --clr-accent-cool: #4A7B8C;       /* teal */
+  --clr-text:        #1C2B3A;       /* primary text */
+  --clr-text-muted:  #5A6473;       /* muted text */
+  --clr-border:      #D5CCB8;       /* soft border */
+  --clr-white:       #FDFAF5;
+
+  /* --- Typography --- */
+  --font-display:    'Cormorant Garamond', Georgia, serif;
+  --font-body:       'DM Sans', system-ui, sans-serif;
+
+  --fs-xs:    0.75rem;
+  --fs-sm:    0.875rem;
+  --fs-base:  1rem;
+  --fs-md:    1.125rem;
+  --fs-lg:    1.375rem;
+  --fs-xl:    1.75rem;
+  --fs-2xl:   2.5rem;
+  --fs-3xl:   3.5rem;
+  --fs-4xl:   5rem;
+
+  --fw-light:   300;
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+
+  --lh-tight:  1.1;
+  --lh-normal: 1.6;
+  --lh-loose:  1.8;
+
+  /* --- Spacing --- */
+  --space-1:   0.25rem;
+  --space-2:   0.5rem;
+  --space-3:   0.75rem;
+  --space-4:   1rem;
+  --space-6:   1.5rem;
+  --space-8:   2rem;
+  --space-12:  3rem;
+  --space-16:  4rem;
+  --space-24:  6rem;
+  --space-32:  8rem;
+
+  /* --- Layout --- */
+  --max-w:       1200px;
+  --max-w-text:  720px;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+
+  /* --- Transitions --- */
+  --trans-fast:   150ms ease;
+  --trans-normal: 300ms ease;
+  --trans-slow:   500ms ease;
+
+  /* --- Shadows --- */
+  --shadow-sm:  0 1px 3px rgba(28,43,58,0.08);
+  --shadow-md:  0 4px 16px rgba(28,43,58,0.12);
+  --shadow-lg:  0 12px 40px rgba(28,43,58,0.15);
+}
+
+/* ---- Skip to content (WCAG 2.4.1) ---- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 9999;
+  background: var(--clr-accent);
+  color: var(--clr-white);
+  padding: var(--space-3) var(--space-6);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  transition: top var(--trans-fast);
+}
+.skip-link:focus { top: 0; }
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ---- Container ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--space-8);
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-semi);
+}
+
+h1 { font-size: clamp(2.5rem, 7vw, var(--fs-4xl)); }
+h2 { font-size: clamp(1.75rem, 4vw, var(--fs-3xl)); }
+h3 { font-size: clamp(1.25rem, 2.5vw, var(--fs-xl)); }
+h4 { font-size: var(--fs-lg); }
+
+p {
+  font-size: var(--fs-md);
+  line-height: var(--lh-loose);
+  color: var(--clr-text);
+  max-width: 68ch;
+}
+
+em { font-style: italic; }
+strong { font-weight: var(--fw-medium); }
+
+/* ---- Navigation ---- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-8);
+  background: rgba(245,240,232,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semi);
+  color: var(--clr-primary);
+  letter-spacing: -0.01em;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  transition: color var(--trans-fast);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--clr-accent);
+  border-bottom-color: var(--clr-accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: var(--fs-xl);
+  cursor: pointer;
+  color: var(--clr-primary);
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-8);
+  background: var(--clr-accent);
+  color: var(--clr-white);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: background var(--trans-fast), transform var(--trans-fast), box-shadow var(--trans-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: #A84016;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-8);
+  background: transparent;
+  color: var(--clr-primary);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--clr-primary);
+  border-radius: var(--radius-sm);
+  transition: all var(--trans-fast);
+}
+
+.btn-ghost:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  transform: translateY(-2px);
+}
+
+/* ---- Section labels ---- */
+.section-title {
+  font-size: clamp(1.75rem, 4vw, var(--fs-2xl));
+  margin-bottom: var(--space-4);
+}
+
+.section-intro {
+  font-size: var(--fs-lg);
+  color: var(--clr-text-muted);
+  margin-bottom: var(--space-12);
+  max-width: 65ch;
+}
+
+.section-header {
+  margin-bottom: var(--space-12);
+}
+
+.section-header h2 { margin-bottom: var(--space-4); }
+.section-header p { color: var(--clr-text-muted); }
+
+/* ---- Tag label ---- */
+.tag {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  border: 1px solid var(--clr-accent);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 2px;
+  margin-bottom: var(--space-4);
+}
+
+/* ---- Footer ---- */
+.footer {
+  background: var(--clr-primary);
+  color: rgba(253,250,245,0.6);
+  padding: var(--space-12) 0;
+  margin-top: var(--space-24);
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer p {
+  font-size: var(--fs-sm);
+  color: rgba(253,250,245,0.6);
+  max-width: none;
+}
+
+/* ---- Page hero (inner pages) ---- */
+.page-hero {
+  padding: var(--space-24) 0 var(--space-16);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.page-hero .tag { margin-bottom: var(--space-6); }
+
+.page-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: var(--space-6);
+}
+
+.page-hero p {
+  font-size: var(--fs-lg);
+  color: var(--clr-text-muted);
+  max-width: 60ch;
+}
+
+/* ---- Dividers ---- */
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--clr-accent);
+  margin: var(--space-8) 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .container { padding-inline: var(--space-4); }
+
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--clr-bg); padding: var(--space-6); border-bottom: 1px solid var(--clr-border); gap: var(--space-4); }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+  .nav { position: relative; }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Proposal — Roots & Routes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/inner.css" />
+  <link rel="stylesheet" href="css/print.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Roots &amp; Routes</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="requirements.html">Requirements</a></li>
+      <li><a href="proposal.html" class="active">Proposal</a></li>
+      <li><a href="design-system.html">Design System</a></li>
+      <li><a href="components.html">Cards &amp; Type</a></li>
+      <li><a href="ai-reflection.html">AI Reflection</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="tag">03 — Design Proposal</span>
+      <h1>Design Proposal</h1>
+      <p>A proposed community platform for the South Asian diaspora in Australia — presented to the Connected Communities Initiative.</p>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+
+      <!-- Site Purpose -->
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Site Purpose &amp; Concept</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p class="proposal-intro">"Roots &amp; Routes is a community platform where every South Asian voice in Australia belongs — whether you arrived last year or were born here."</p>
+            <p><strong>Roots &amp; Routes</strong> proposes a community website for the South Asian diaspora in Australia, commissioned under the CCI brief. The site serves as a central hub for stories, resources, events, and connection across generational and cultural lines.</p>
+            <p>The name captures the dual experience of diaspora: the deep pull of cultural roots and the ongoing navigation of routes — migration, settlement, and identity formation in a new place. This framing is intentional and grounded in research finding F1 (multi-layered identity).</p>
+            <p>The site is <strong>non-commercial</strong>, community-owned in spirit, and designed to be accessible to users across all age groups and digital literacy levels, directly responding to design requirements DR1–DR6.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Information Architecture -->
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Information Architecture</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>The site is structured around five primary sections, each addressing a distinct user need identified in research. Navigation is kept deliberately shallow (maximum 2 levels) in response to DR6 and F2 (accessibility for older users).</p>
+
+            <div class="ia-diagram">
+              <h4>Site Map</h4>
+              <div class="ia-tree">
+                <div class="ia-root">🌐 roots-and-routes.com.au</div>
+                <div class="ia-level1">Home — Introduction, featured stories, upcoming events</div>
+                <div class="ia-level1">Stories — Community narratives and heritage content</div>
+                <div class="ia-level2">First-generation voices</div>
+                <div class="ia-level2">Second-generation perspectives</div>
+                <div class="ia-level2">Share Your Story (submission)</div>
+                <div class="ia-level1">Connect — Events, community directory, resources</div>
+                <div class="ia-level2">Upcoming events</div>
+                <div class="ia-level2">Community organisations</div>
+                <div class="ia-level2">Newcomer resources</div>
+                <div class="ia-level1">Culture — Heritage, language, traditions</div>
+                <div class="ia-level2">Food &amp; recipes</div>
+                <div class="ia-level2">Arts &amp; music</div>
+                <div class="ia-level2">Language resources</div>
+                <div class="ia-level1">About — Mission, values, contributors</div>
+              </div>
+            </div>
+
+            <div class="wireframe-placeholder">
+              <p><em>Wireframe: Homepage layout sketch</em></p>
+              <div class="wireframe-mock">
+                <div class="wf-bar" style="width: 100%; height: 36px; background: rgba(28,43,58,0.15);"></div>
+                <div class="wf-hero"></div>
+                <div class="wf-bar" style="width: 60%;"></div>
+                <div class="wf-bar" style="width: 40%;"></div>
+                <div style="height: var(--space-4);"></div>
+                <div class="wf-grid">
+                  <div class="wf-card"></div>
+                  <div class="wf-card"></div>
+                  <div class="wf-card"></div>
+                </div>
+                <div style="height: var(--space-4);"></div>
+                <div class="wf-bar" style="width: 80%;"></div>
+                <div class="wf-bar" style="width: 50%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Features -->
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Key Features</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>Each feature is traceable to a research finding and design requirement. Features are proposed for A3 implementation.</p>
+            <div class="feature-grid">
+              <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Story Hub</h3>
+                <p>Community-authored stories and testimonials, categorised by theme — not country of origin. Contributor profiles with optional cultural context.</p>
+                <small style="color:var(--clr-accent); font-size:0.75rem; display:block; margin-top:0.5rem;">DR1, DR3 · F1, F3</small>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Events Listing</h3>
+                <p>Community events searchable by city. Covers cultural festivals, community meetings, language classes, and social gatherings.</p>
+                <small style="color:var(--clr-accent); font-size:0.75rem; display:block; margin-top:0.5rem;">DR6 · F4</small>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3>Submit Your Story</h3>
+                <p>A low-friction form for community members to share experiences. Reviewed by community editors before publication.</p>
+                <small style="color:var(--clr-accent); font-size:0.75rem; display:block; margin-top:0.5rem;">DR3 · F3</small>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Community Directory</h3>
+                <p>Listings of South Asian community organisations, cultural groups, and support services across Australian states.</p>
+                <small style="color:var(--clr-accent); font-size:0.75rem; display:block; margin-top:0.5rem;">DR6 · F1</small>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Newcomer Resources</h3>
+                <p>Curated guides for recent migrants: housing, language, health, employment, and community integration support.</p>
+                <small style="color:var(--clr-accent); font-size:0.75rem; display:block; margin-top:0.5rem;">DR2, DR5 · F5</small>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Culture &amp; Heritage</h3>
+                <p>Pages celebrating South Asian arts, music, food, language, and traditions — written by and for the community.</p>
+                <small style="color:var(--clr-accent); font-size:0.75rem; display:block; margin-top:0.5rem;">DR1, DR5 · F1, F5</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- UX/UI Principles -->
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>UX/UI Principles Applied</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>The following UX/UI principles drawn from course content directly inform the proposal decisions above.</p>
+            <div class="principle-list">
+              <div class="principle-item">
+                <div class="principle-icon">🔍</div>
+                <div>
+                  <h3>Affordance and Signifiers (Norman, 2013)</h3>
+                  <p>All interactive elements use clear visual signifiers — hover states, underlined links, visible focus indicators, and button-like appearance for all clickable elements. This is especially important for older users (F2, DR2) who may be less accustomed to ambiguous UI patterns.</p>
+                </div>
+              </div>
+              <div class="principle-item">
+                <div class="principle-icon">🧠</div>
+                <div>
+                  <h3>Cognitive Load Reduction (Sweller, 1988)</h3>
+                  <p>Navigation is kept to two levels maximum. Page layouts use clear visual hierarchy with generous whitespace. Chunked content in cards prevents information overwhelm. This directly addresses DR6 and F2 (Sunita's experience of feeling overwhelmed).</p>
+                </div>
+              </div>
+              <div class="principle-item">
+                <div class="principle-icon">🔁</div>
+                <div>
+                  <h3>Consistency and Standards (Nielsen, 1994)</h3>
+                  <p>Navigation, typography, and interactive components remain consistent across all pages. Users learn patterns from the homepage that apply throughout the site, reducing the cognitive effort required to use unfamiliar pages.</p>
+                </div>
+              </div>
+              <div class="principle-item">
+                <div class="principle-icon">♿</div>
+                <div>
+                  <h3>Universal Design (Connell et al., 1997)</h3>
+                  <p>Rather than designing for an "average" user and adapting for accessibility, the proposal treats inclusive design as a baseline. Colour contrast, font sizing, keyboard navigation, and plain language all serve the full spectrum of users by default (DR2).</p>
+                </div>
+              </div>
+              <div class="principle-item">
+                <div class="principle-icon">🌐</div>
+                <div>
+                  <h3>Cultural UX (Marcus &amp; Gould, 2000)</h3>
+                  <p>Interface design communicates meaning through cultural cues as well as functional cues. Colour, imagery, and typography choices are grounded in South Asian visual culture to build immediate trust and recognition, without relying on clichéd or stereotyped visual representations (DR5, F5).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="page-nav-band">
+    <div class="container">
+      <a href="requirements.html" class="page-nav-link prev">← Design Requirements</a>
+      <a href="design-system.html" class="page-nav-link next">Design System →</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>DECO7140 S1 2026 — A2 Research &amp; Proposal — Connected Communities Initiative</p>
+      <p>Roots &amp; Routes · South Asian Diaspora Platform Concept</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>

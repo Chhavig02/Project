@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cards & Typography Components — Roots & Routes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/inner.css" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/print.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Roots &amp; Routes</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="requirements.html">Requirements</a></li>
+      <li><a href="proposal.html">Proposal</a></li>
+      <li><a href="design-system.html" class="active">Design System</a></li>
+      <li><a href="ai-reflection.html">AI Reflection</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <nav class="ds-breadcrumb" aria-label="Breadcrumb">
+        <a href="design-system.html">Design System</a>
+        <span aria-hidden="true">›</span>
+        Cards &amp; Typography Components
+      </nav>
+      <span class="tag">Studio Work · Weeks 7 &amp; 8</span>
+      <h1>Cards &amp; Typography</h1>
+      <p>Implemented UI components from studio activities — demonstrating typographic hierarchy and card design patterns applied to the Roots &amp; Routes platform.</p>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+
+      <!-- ══════════════════════════════════════
+           SECTION 1: TYPOGRAPHY COMPONENTS
+           Week 7 studio work
+      ══════════════════════════════════════ -->
+      <section class="content-section">
+        <div class="comp-section-header">
+          <span class="comp-week-tag">Week 7 Studio</span>
+          <h2>Typography Components</h2>
+          <p>Implemented typographic elements demonstrating hierarchy, readability, and tone — applied to the Roots &amp; Routes community context.</p>
+        </div>
+
+        <!-- Display heading -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Display Heading — H1</span>
+            <span class="comp-spec">Cormorant Garamond · Light 300 · clamp(2.5rem, 7vw, 5rem)</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <h1 class="demo-h1">Roots &amp; Routes</h1>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> The light weight of Cormorant Garamond creates elegance without heaviness. Large display type sets the emotional register of the page before the user reads a single word — warmth, depth, cultural resonance. Responsive fluid sizing via <code>clamp()</code> avoids abrupt layout jumps at breakpoints.
+          </div>
+        </div>
+
+        <!-- Section heading -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Section Heading — H2</span>
+            <span class="comp-spec">Cormorant Garamond · SemiBold 600 · clamp(1.75rem, 4vw, 3.5rem)</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <h2 class="demo-h2">Community Voices</h2>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> SemiBold weight creates clear section entry points. Users scanning a page (F-pattern reading) will land on H2s first — they must be large enough to anchor attention and distinct from body text. Line height 1.1 prevents awkward gaps in multi-line headings.
+          </div>
+        </div>
+
+        <!-- Card heading -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Card / Sub-heading — H3</span>
+            <span class="comp-spec">Cormorant Garamond · SemiBold 600 · clamp(1.25rem, 2.5vw, 1.75rem)</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <h3 class="demo-h3">The Kitchen Was Always My Home</h3>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> H3 is the primary heading inside cards and content blocks. It sits clearly below H2 in the visual hierarchy while still commanding enough weight to guide the eye. Used consistently across story cards, feature cards, and section sub-headings.
+          </div>
+        </div>
+
+        <!-- Body text -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Body Text</span>
+            <span class="comp-spec">DM Sans · Regular 400 · 18px · line-height 1.8 · max 68ch</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <p class="demo-body">My mother packed three things when she left Hyderabad in 1983: a suitcase of saris she would rarely wear again, a photograph of her parents' house, and a small tin of spices she had ground herself the night before she left. The cardamom smell followed her across the Indian Ocean, through immigration, and into a flat in suburban Melbourne where nothing else was familiar.</p>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> 18px minimum body size exceeds WCAG 1.4.4. Line-height 1.8 is above recommended minimum (1.5) — intentional for this platform because many users (F2, Sunita) have reduced visual acuity. Max-width 68ch prevents overly long lines that tire readers. DM Sans's open apertures and humanist letterforms support sustained reading.
+          </div>
+        </div>
+
+        <!-- Pull quote -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Pull Quote</span>
+            <span class="comp-spec">Cormorant Garamond · Italic · 24px · Terracotta accent colour</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <blockquote class="demo-pullquote">
+              "I feel Australian but I'm always asked where I'm from. I want a space that doesn't make me choose between identities."
+              <cite>— Ananya, 22 · Sydney</cite>
+            </blockquote>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> Pull quotes serve two roles: they break up long reading and they carry emotional weight. The italic Cormorant Garamond in terracotta creates a clear visual and semantic break from body text. The <code>&lt;blockquote&gt;</code> element is semantically correct — screen readers announce it as a quote (WCAG 1.3.1).
+          </div>
+        </div>
+
+        <!-- Label / category tag -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Category Label / Tag</span>
+            <span class="comp-spec">DM Sans · Medium 500 · 12px · Letter-spacing 0.1em · Uppercase</span>
+          </div>
+          <div class="comp-demo comp-demo-light" style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+            <span class="demo-tag demo-tag-accent">First-Generation</span>
+            <span class="demo-tag demo-tag-cool">Community Resource</span>
+            <span class="demo-tag demo-tag-outline">Cultural Heritage</span>
+            <span class="demo-tag demo-tag-warm">Events</span>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> Category labels create scannability — users can quickly identify the type of content without reading the full title. Letter-spacing and uppercase distinguishes labels clearly from headings and body text. Multiple colour variants allow semantic grouping (stories, resources, events, culture) without relying on colour alone — each variant also has a distinct border style (WCAG 1.4.1).
+          </div>
+        </div>
+
+        <!-- Inline link -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Inline Link</span>
+            <span class="comp-spec">DM Sans · Regular · Underlined · Terracotta on hover</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <p class="demo-body">Learn more about the <a href="#" class="demo-inline-link" onclick="return false;">South Asian diaspora community</a> in Australia, or explore our <a href="#" class="demo-inline-link" onclick="return false;">newcomer resources</a> for recently arrived community members.</p>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> Links are underlined by default — not just colour-differentiated — satisfying WCAG 1.4.1. Hover state changes both colour and opacity, providing clear affordance. Focus state uses a visible outline (WCAG 2.4.7) for keyboard users.
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 2: CARD COMPONENTS
+           Week 8 studio work
+      ══════════════════════════════════════ -->
+      <section class="content-section">
+        <div class="comp-section-header">
+          <span class="comp-week-tag">Week 8 Studio</span>
+          <h2>Card Components</h2>
+          <p>Implemented card patterns — the primary content container across the Roots &amp; Routes platform. Each card variant is designed for a specific use case identified in research.</p>
+        </div>
+
+        <!-- Story Card -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Story Card — Primary</span>
+            <span class="comp-spec">Used in: Stories section, Homepage featured stories</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <div class="card-grid-demo">
+              <article class="story-card">
+                <div class="story-card-img" aria-hidden="true">
+                  <div class="story-card-img-placeholder"></div>
+                </div>
+                <div class="story-card-body">
+                  <span class="demo-tag demo-tag-accent" style="margin-bottom:0.75rem; display:inline-block;">First-Generation</span>
+                  <h3 class="story-card-title">The Kitchen Was Always My Home</h3>
+                  <p class="story-card-excerpt">When everything else changed, the smell of cardamom stayed the same. My mother packed three things when she left Hyderabad in 1983...</p>
+                  <div class="story-card-meta">
+                    <span class="story-card-author">By Priya Reddy · Melbourne</span>
+                    <a href="#" class="story-card-link" onclick="return false;" aria-label="Read full story: The Kitchen Was Always My Home">Read story →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="story-card">
+                <div class="story-card-img" aria-hidden="true">
+                  <div class="story-card-img-placeholder" style="background:linear-gradient(135deg, rgba(74,123,140,0.3), rgba(74,123,140,0.1));"></div>
+                </div>
+                <div class="story-card-body">
+                  <span class="demo-tag demo-tag-cool" style="margin-bottom:0.75rem; display:inline-block;">Second-Generation</span>
+                  <h3 class="story-card-title">Both and Neither: Growing Up Between Two Worlds</h3>
+                  <p class="story-card-excerpt">People ask where I'm from and I never know which answer they want — the Australian one or the Indian one...</p>
+                  <div class="story-card-meta">
+                    <span class="story-card-author">By Arjun Sharma · Sydney</span>
+                    <a href="#" class="story-card-link" onclick="return false;" aria-label="Read full story: Both and Neither">Read story →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="story-card">
+                <div class="story-card-img" aria-hidden="true">
+                  <div class="story-card-img-placeholder" style="background:linear-gradient(135deg, rgba(232,144,58,0.25), rgba(196,80,26,0.1));"></div>
+                </div>
+                <div class="story-card-body">
+                  <span class="demo-tag demo-tag-warm" style="margin-bottom:0.75rem; display:inline-block;">Heritage</span>
+                  <h3 class="story-card-title">Teaching My Daughter to Cook Dal</h3>
+                  <p class="story-card-excerpt">She asks me why we don't just use the packet mix. I tell her because her grandmother didn't, and her grandmother didn't...</p>
+                  <div class="story-card-meta">
+                    <span class="story-card-author">By Sunita Patel · Brisbane</span>
+                    <a href="#" class="story-card-link" onclick="return false;" aria-label="Read full story: Teaching My Daughter">Read story →</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> Story cards are the most important UI component — they are what community members will see first on the Stories page and homepage. The image-above layout creates visual anchoring before the reader reaches text (Gestalt proximity). Category tags provide instant orientation. The excerpt is limited to ~2 lines to respect page density. Card hover state (border highlight + lift) provides affordance without requiring text (DR3, F3 — community ownership made inviting). All cards use semantic <code>&lt;article&gt;</code> elements for correct screen reader announcement.
+          </div>
+        </div>
+
+        <!-- Event Card -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Event Card</span>
+            <span class="comp-spec">Used in: Connect section → Events listing</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <div class="event-card-grid">
+              <article class="event-card">
+                <div class="event-card-date">
+                  <span class="event-day">12</span>
+                  <span class="event-month">May</span>
+                </div>
+                <div class="event-card-content">
+                  <span class="demo-tag demo-tag-outline" style="margin-bottom:0.5rem; display:inline-block;">Cultural Festival</span>
+                  <h3 class="event-card-title">Diwali Community Celebration 2026</h3>
+                  <p class="event-card-meta-row">
+                    <span class="event-meta-item">📍 Federation Square, Melbourne</span>
+                    <span class="event-meta-item">⏰ 4:00 PM – 10:00 PM</span>
+                  </p>
+                  <a href="#" class="event-card-link" onclick="return false;" aria-label="More information about Diwali Community Celebration 2026">More info →</a>
+                </div>
+              </article>
+              <article class="event-card">
+                <div class="event-card-date">
+                  <span class="event-day">18</span>
+                  <span class="event-month">May</span>
+                </div>
+                <div class="event-card-content">
+                  <span class="demo-tag demo-tag-cool" style="margin-bottom:0.5rem; display:inline-block;">Language Class</span>
+                  <h3 class="event-card-title">Telugu Language Workshop — Beginners</h3>
+                  <p class="event-card-meta-row">
+                    <span class="event-meta-item">📍 Brisbane Community Centre</span>
+                    <span class="event-meta-item">⏰ 10:00 AM – 12:00 PM</span>
+                  </p>
+                  <a href="#" class="event-card-link" onclick="return false;" aria-label="More information about Telugu Language Workshop">More info →</a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> The date block (day / month) is visually prominent — users scanning events need the date at a glance, not buried in text. This pattern is familiar from established event platforms, satisfying Nielsen's "match between system and real world" heuristic. The horizontal layout (date + content) is more space-efficient than a stacked card for lists of events (DR6, F4 — mobile-first: this collapses to a stacked layout on small screens).
+          </div>
+        </div>
+
+        <!-- Resource Card -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Resource Card</span>
+            <span class="comp-spec">Used in: Newcomer Resources section</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <div class="resource-card-grid">
+              <article class="resource-card">
+                <div class="resource-card-icon" aria-hidden="true">🏥</div>
+                <div class="resource-card-content">
+                  <h3 class="resource-card-title">Health &amp; Medicare</h3>
+                  <p class="resource-card-desc">Enrol in Medicare, find culturally responsive GPs, and access mental health support services across Australian states.</p>
+                  <a href="#" class="resource-card-link" onclick="return false;" aria-label="Access Health and Medicare resources">Access resources →</a>
+                </div>
+              </article>
+              <article class="resource-card">
+                <div class="resource-card-icon" aria-hidden="true">📚</div>
+                <div class="resource-card-content">
+                  <h3 class="resource-card-title">English Language Support</h3>
+                  <p class="resource-card-desc">Free AMEP classes, conversation groups, and online learning resources for newly arrived community members.</p>
+                  <a href="#" class="resource-card-link" onclick="return false;" aria-label="Access English Language Support resources">Access resources →</a>
+                </div>
+              </article>
+              <article class="resource-card">
+                <div class="resource-card-icon" aria-hidden="true">⚖️</div>
+                <div class="resource-card-content">
+                  <h3 class="resource-card-title">Legal Aid &amp; Rights</h3>
+                  <p class="resource-card-desc">Know your rights, find free legal advice, and access support for employment discrimination and tenancy issues.</p>
+                  <a href="#" class="resource-card-link" onclick="return false;" aria-label="Access Legal Aid and Rights resources">Access resources →</a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> Resource cards prioritise scannability — users in need of help (newcomers, Sunita's persona, F2) need to quickly identify the resource category without reading paragraphs. The icon provides a visual anchor (not text-only), description gives enough context to confirm relevance, and the link is the primary action. Minimal design reduces cognitive load (DR2, DR6). Icon decorative only — <code>aria-hidden="true"</code> applied; card heading provides accessible label via <code>aria-label</code> on link.
+          </div>
+        </div>
+
+        <!-- Profile / Persona Card -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Contributor Profile Card</span>
+            <span class="comp-spec">Used in: Story contributor attribution, About page team</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <div class="profile-card-grid">
+              <div class="profile-card">
+                <div class="profile-card-avatar" aria-hidden="true">P</div>
+                <div class="profile-card-info">
+                  <h3 class="profile-card-name">Priya Reddy</h3>
+                  <span class="profile-card-detail">Melbourne · First-generation · Software Engineer</span>
+                  <p class="profile-card-bio">"Writing this story was the first time I'd ever described my migration experience in words. I didn't realise how much I needed to."</p>
+                </div>
+              </div>
+              <div class="profile-card">
+                <div class="profile-card-avatar" style="background:var(--clr-accent-cool);" aria-hidden="true">A</div>
+                <div class="profile-card-info">
+                  <h3 class="profile-card-name">Arjun Sharma</h3>
+                  <span class="profile-card-detail">Sydney · Second-generation · Graphic Designer</span>
+                  <p class="profile-card-bio">"This platform gives me space to talk about what it means to be South Asian AND Australian — not one or the other."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> Contributor cards replace anonymous "user submitted" framing with real community authorship — directly responding to F3 (community ownership absent from existing platforms) and DR3 (community ownership requirement). The avatar initial is a fallback for when a photo is not provided — many users may not feel comfortable sharing images. The detail line (city, generation, profession) acknowledges the multi-dimensional identity of community members (DR1, F1).
+          </div>
+        </div>
+
+        <!-- Stat / Highlight Card -->
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Statistic / Highlight Card</span>
+            <span class="comp-spec">Used in: Homepage context band, About page impact section</span>
+          </div>
+          <div class="comp-demo comp-demo-dark">
+            <div class="stat-card-grid">
+              <div class="stat-card">
+                <span class="stat-card-num">1.1M+</span>
+                <p class="stat-card-label">South Asians in Australia — the fastest-growing diaspora group (ABS Census 2021)</p>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card-num">3</span>
+                <p class="stat-card-label">Distinct generational cohorts with different needs, identities, and digital habits</p>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card-num">0</span>
+                <p class="stat-card-label">Centralised, culturally-safe community storytelling platforms currently serving this community</p>
+              </div>
+            </div>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> Stat cards appear on the dark navy band to create visual contrast and sectioning. The large display number (Cormorant Garamond) creates an immediate emotional anchor before the descriptor is read. White-on-navy achieves 12.1:1 contrast ratio — AAA compliance (DR2). The "0" stat is deliberately provocative — it communicates the gap this platform fills, reinforcing the CCI brief's rationale for the project.
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ══════════════════════════════════════
+           SECTION 3: CARD STATES
+      ══════════════════════════════════════ -->
+      <section class="content-section">
+        <div class="comp-section-header">
+          <span class="comp-week-tag">Interaction States</span>
+          <h2>Card Interaction States</h2>
+          <p>How cards behave across different user interaction states — hover, focus, and active. Hover over and tab through the cards below.</p>
+        </div>
+
+        <div class="comp-block">
+          <div class="comp-label-bar">
+            <span class="comp-label">Interactive card states — hover, focus, keyboard</span>
+            <span class="comp-spec">Try hovering, clicking, and tabbing through these cards</span>
+          </div>
+          <div class="comp-demo comp-demo-light">
+            <div class="state-demo-grid">
+              <a href="#" class="state-card state-default" onclick="return false;">
+                <div class="state-badge">Default</div>
+                <h3>Default state</h3>
+                <p>White background, subtle border, no elevation</p>
+              </a>
+              <a href="#" class="state-card state-hover" onclick="return false;" tabindex="0">
+                <div class="state-badge">Hover</div>
+                <h3>Hover state</h3>
+                <p>Border colour → terracotta, subtle lift (translateY -4px), shadow deepens</p>
+              </a>
+              <a href="#" class="state-card" onclick="return false;" style="outline: 3px solid var(--clr-accent-warm); outline-offset: 3px;">
+                <div class="state-badge" style="background:var(--clr-accent-warm);">Focus</div>
+                <h3>Focus state</h3>
+                <p>Saffron outline — visible to keyboard users, meets WCAG 2.4.7</p>
+              </a>
+            </div>
+            <p style="font-size:var(--fs-xs); color:var(--clr-text-muted); margin-top:var(--space-4); font-style:italic;">Tab through cards above to see keyboard focus indicator</p>
+          </div>
+          <div class="comp-rationale">
+            <strong>Rationale:</strong> Three distinct states ensure that the card's interactive nature is clear through multiple channels — not colour alone (WCAG 1.4.1). The focus ring uses saffron (#E8903A) which contrasts with both the parchment background (3.2:1) and the terracotta border. The translateY lift provides proprioceptive feedback that mirrors real-world affordance of lifting an object. All state transitions use 300ms ease — slow enough to be perceptible, fast enough not to feel sluggish.
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="page-nav-band">
+    <div class="container">
+      <a href="design-system.html" class="page-nav-link prev">← Design System Index</a>
+      <a href="ds-colour.html" class="page-nav-link next">Colour System →</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>DECO7140 S1 2026 — A2 Research &amp; Proposal — Connected Communities Initiative</p>
+      <p>Roots &amp; Routes · South Asian Diaspora Platform Concept</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>

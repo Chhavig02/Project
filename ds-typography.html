@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typography — Design System — Roots & Routes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/inner.css" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/print.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Roots &amp; Routes</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="requirements.html">Requirements</a></li>
+      <li><a href="proposal.html">Proposal</a></li>
+      <li><a href="design-system.html" class="active">Design System</a></li>
+      <li><a href="components.html">Cards &amp; Type</a></li>
+      <li><a href="ai-reflection.html">AI Reflection</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <nav class="ds-breadcrumb" aria-label="Design system navigation">
+        <a href="design-system.html">Design System</a> <span aria-hidden="true">›</span> 02 Typography
+      </nav>
+      <span class="tag">Design System · 02 of 07</span>
+      <h1>Typography</h1>
+      <p>Typeface choices, font scale, and readability rules — supporting hierarchy, tone, and cognitive processing.</p>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <nav class="ds-sub-nav" aria-label="Design system sections">
+        <a href="ds-visual-structure.html" class="ds-sub-link">01 Structure</a>
+        <a href="ds-typography.html" class="ds-sub-link active">02 Typography</a>
+        <a href="ds-colour.html" class="ds-sub-link">03 Colour</a>
+        <a href="ds-imagery.html" class="ds-sub-link">04 Imagery</a>
+        <a href="ds-interaction.html" class="ds-sub-link">05 Interaction</a>
+        <a href="ds-usability.html" class="ds-sub-link">06 Usability</a>
+        <a href="ds-meaning-trust.html" class="ds-sub-link">07 Meaning</a>
+      </nav>
+
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Typeface Selection</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>Two typefaces form the typographic system: <strong>Cormorant Garamond</strong> for display headings and <strong>DM Sans</strong> for all body and UI text. Both are loaded via Google Fonts and applied consistently across every page.</p>
+            <div class="font-pair-demo">
+              <div class="font-demo-block">
+                <span class="font-demo-sample" style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; line-height:1;">Aa Bb Cc</span>
+                <div class="font-demo-meta">
+                  <strong>Cormorant Garamond</strong>
+                  <span>Display headings · H1, H2, H3, pull quotes</span>
+                  <span>Weights used: Light 300, Regular 400, SemiBold 600, Italic variants</span>
+                  <span class="font-rationale">Carries warmth, history, and cultural depth. The serif structure evokes printed heritage — fitting for a storytelling platform. The italic variant adds expressiveness to pull quotes and accent text.</span>
+                </div>
+              </div>
+              <div class="font-demo-block">
+                <span class="font-demo-sample" style="font-family:'DM Sans',sans-serif; font-size:3rem; font-weight:400; line-height:1;">Aa Bb Cc</span>
+                <div class="font-demo-meta">
+                  <strong>DM Sans</strong>
+                  <span>Body text · UI labels · navigation · buttons</span>
+                  <span>Weights used: Light 300, Regular 400, Medium 500</span>
+                  <span class="font-rationale">Humanist sans-serif designed for screen legibility. Slightly rounded letterforms feel approachable without being childish. Excellent legibility at small sizes — critical for accessibility (DR2, F2).</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Type Scale</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>The type scale uses <strong>clamp()</strong> for responsive fluid sizing between mobile and desktop breakpoints. This eliminates the need for multiple media-query overrides and ensures comfortable reading at any viewport width.</p>
+            <div class="type-scale">
+              <div class="type-row">
+                <span class="type-label">H1 · Cormorant Garamond<br />clamp(2.5rem → 5rem) · Light</span>
+                <span class="type-example t-h1">Our Stories</span>
+              </div>
+              <div class="type-row">
+                <span class="type-label">H2 · Cormorant Garamond<br />clamp(1.75rem → 3.5rem) · SemiBold</span>
+                <span class="type-example t-h2">Community Voices</span>
+              </div>
+              <div class="type-row">
+                <span class="type-label">H3 · Cormorant Garamond<br />clamp(1.25rem → 1.75rem) · SemiBold</span>
+                <span class="type-example t-h3">Finding Belonging</span>
+              </div>
+              <div class="type-row">
+                <span class="type-label">Body · DM Sans<br />18px (1.125rem) · Regular · lh 1.8</span>
+                <span class="type-example t-body">The South Asian diaspora in Australia is not a single story — it is thousands of stories, woven together across generations, oceans, and time. This platform exists to make those stories visible.</span>
+              </div>
+              <div class="type-row">
+                <span class="type-label">Small · DM Sans<br />14px (0.875rem) · Regular</span>
+                <span class="type-example t-small">Contributor · Published April 2026 · Sydney, NSW</span>
+              </div>
+              <div class="type-row">
+                <span class="type-label">Label · DM Sans<br />12px (0.75rem) · Medium · Letter-spaced</span>
+                <span class="type-example t-label">COMMUNITY STORIES</span>
+              </div>
+              <div class="type-row">
+                <span class="type-label">Pull Quote · Cormorant Garamond<br />24px · Italic · Accent colour</span>
+                <span class="type-example" style="font-family:var(--font-display);font-size:1.5rem;font-style:italic;color:var(--clr-accent);line-height:1.3;">"I want a space that doesn't make me choose between identities."</span>
+              </div>
+            </div>
+
+            <div class="insight-box" style="margin-top:var(--space-8);">
+              <span class="insight-label">Accessibility rationale → DR2, F2</span>
+              <p>Body text minimum 18px exceeds WCAG 1.4.4 requirements. Line height 1.8 aids readers with dyslexia or low vision. Maximum line length 68 characters prevents eye fatigue on wide screens. All rationale traceable to Sunita's interview (F2) and DR2 (WCAG 2.1 AA compliance).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Typography in Context</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>This demo shows a simulated content card as it would appear on the Stories section of the final website — showing the full typographic system in context.</p>
+            <div class="type-context-demo">
+              <span class="t-label" style="color:var(--clr-accent);">FIRST-GENERATION VOICES</span>
+              <h2 style="font-family:var(--font-display);font-size:2rem;margin:0.5rem 0 0.75rem;color:var(--clr-primary);">The Kitchen Was Always My Home</h2>
+              <p style="font-style:italic;font-family:var(--font-display);font-size:1.25rem;color:var(--clr-accent);margin-bottom:1rem;">"When everything else changed, the smell of cardamom stayed the same."</p>
+              <p style="font-size:1.125rem;line-height:1.8;color:var(--clr-text);margin-bottom:1rem;">My mother packed three things when she left Hyderabad in 1983: a suitcase of saris she would rarely wear again, a photograph of her parents' house, and a small tin of spices she had ground herself the night before she left.</p>
+              <div style="display:flex;gap:1rem;align-items:center;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--clr-border);">
+                <span style="font-size:0.875rem;color:var(--clr-text-muted);">By <strong style="color:var(--clr-text);">Priya Reddy</strong></span>
+                <span style="font-size:0.875rem;color:var(--clr-text-muted);">·</span>
+                <span style="font-size:0.875rem;color:var(--clr-text-muted);">Melbourne · March 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="page-nav-band">
+    <div class="container">
+      <a href="ds-visual-structure.html" class="page-nav-link prev">← 01 Visual Structure</a>
+      <a href="ds-colour.html" class="page-nav-link next">03 Colour →</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p>DECO7140 S1 2026 — A2 Research &amp; Proposal — Connected Communities Initiative</p>
+      <p>Roots &amp; Routes · South Asian Diaspora Platform Concept</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>

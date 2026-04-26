@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Requirements — Roots & Routes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/inner.css" />
+  <link rel="stylesheet" href="css/print.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Roots &amp; Routes</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="requirements.html" class="active">Requirements</a></li>
+      <li><a href="proposal.html">Proposal</a></li>
+      <li><a href="design-system.html">Design System</a></li>
+      <li><a href="components.html">Cards &amp; Type</a></li>
+      <li><a href="ai-reflection.html">AI Reflection</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="tag">02 — Synthesis</span>
+      <h1>Design Requirements</h1>
+      <p>Research insights translated into clear, traceable design commitments — the bridge between what we learned and what we will build.</p>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>From Insight to Requirement</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <div class="requirements-intro">
+              <p>The following design requirements are derived directly from the five research insights identified on the Research page. Each requirement includes a traceability reference to the specific findings and the CCI client brief clause it responds to. These requirements are written as design commitments — not aspirations, but binding decisions that will shape every aspect of the proposal and implementation.</p>
+            </div>
+
+            <div class="req-list">
+
+              <div class="req-item">
+                <div class="req-id">DR1</div>
+                <div class="req-content">
+                  <h3>Multi-voice, inclusive representation</h3>
+                  <p>The platform must present content from multiple generational and cultural perspectives within the South Asian diaspora. No single "voice" should dominate. Content must avoid stereotyping or flattening cultural complexity.</p>
+                  <p><strong>Implementation guidance:</strong> Story section structured by theme, not country of origin; contributor profiles that acknowledge mixed or hybrid identity; editorial guidelines prohibiting reductive cultural framing.</p>
+                  <div>
+                    <span class="req-trace">↳ F1: Multi-layered identity</span>
+                    <span class="req-trace">↳ CCI Brief: Reflects diversity within community</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="req-item">
+                <div class="req-id">DR2</div>
+                <div class="req-content">
+                  <h3>Accessible-first design — WCAG 2.1 AA compliance</h3>
+                  <p>All interface elements must meet or exceed WCAG 2.1 Level AA accessibility standards. This includes minimum contrast ratios of 4.5:1 for body text and 3:1 for large text, keyboard navigability, focus indicators, and appropriate alt text for all images.</p>
+                  <p><strong>Implementation guidance:</strong> Colour choices verified against WCAG contrast checker; font sizes no smaller than 16px body; navigation fully keyboard-accessible; skip-to-content link provided.</p>
+                  <div>
+                    <span class="req-trace">↳ F2: Accessibility barriers</span>
+                    <span class="req-trace">↳ CCI Brief: Accessibility must be prioritised</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="req-item">
+                <div class="req-id">DR3</div>
+                <div class="req-content">
+                  <h3>Community ownership: contribution and storytelling</h3>
+                  <p>The platform must include a clear mechanism for community members to share stories and experiences. Content submission must feel inviting, low-friction, and culturally safe. Submitted content must be framed as community authorship, not user-generated content moderated for SEO.</p>
+                  <p><strong>Implementation guidance:</strong> Dedicated "Share Your Story" section with clear submission call-to-action; contributor bylines with optional cultural context; framing language that uses "our community" not "users".</p>
+                  <div>
+                    <span class="req-trace">↳ F3: Community ownership absent</span>
+                    <span class="req-trace">↳ CCI Brief: Community members seek representation</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="req-item">
+                <div class="req-id">DR4</div>
+                <div class="req-content">
+                  <h3>Mobile-first, responsive layout</h3>
+                  <p>The website must be designed and built mobile-first, with a primary breakpoint for screens 375px wide. Layout, navigation, and content hierarchy must be optimised for thumb navigation on small screens before being adapted for desktop.</p>
+                  <p><strong>Implementation guidance:</strong> CSS written with a mobile-first media query strategy; hamburger/drawer navigation on mobile; touch targets minimum 44×44px; images lazy-loaded for performance.</p>
+                  <div>
+                    <span class="req-trace">↳ F4: Mobile primary access</span>
+                    <span class="req-trace">↳ CCI Brief: Diverse abilities and needs</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="req-item">
+                <div class="req-id">DR5</div>
+                <div class="req-content">
+                  <h3>Culturally safe tone and visual language</h3>
+                  <p>The platform's visual identity, tone of voice, and imagery must be grounded in authentic cultural knowledge and reviewed for cultural sensitivity. Visual references must avoid tourist-gaze aesthetics. Language must be warm, inclusive, and non-paternalistic.</p>
+                  <p><strong>Implementation guidance:</strong> Colour palette draws from South Asian design traditions (earthy terracotta, saffron, teal) without pastiche; photography guidelines emphasising dignity and agency; written content reviewed for Eurocentric assumptions.</p>
+                  <div>
+                    <span class="req-trace">↳ F5: Trust and cultural safety</span>
+                    <span class="req-trace">↳ CCI Brief: Ethical, inclusive, accessible design</span>
+                    <span class="req-trace">↳ CCI Brief: Cultural sensitivity</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="req-item">
+                <div class="req-id">DR6</div>
+                <div class="req-content">
+                  <h3>Clear information architecture and navigation</h3>
+                  <p>The site must be navigable without prior knowledge or instruction. Navigation labels must use plain language. Information hierarchy must be visible and consistent. Users must always know where they are and how to return to key sections.</p>
+                  <p><strong>Implementation guidance:</strong> Maximum 2-level navigation depth; active state on current page; breadcrumbs on sub-pages; consistent footer navigation; search functionality in A3.</p>
+                  <div>
+                    <span class="req-trace">↳ F2: Older user accessibility</span>
+                    <span class="req-trace">↳ F4: Mobile navigation</span>
+                    <span class="req-trace">↳ CCI Brief: Ease of understanding and navigation</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Requirements Summary</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>The six design requirements above collectively establish three core design principles for the Roots &amp; Routes platform:</p>
+            <div class="method-cards">
+              <div class="method-card">
+                <div class="method-num" style="color: var(--clr-accent-warm);">I</div>
+                <h3>Inclusive by default</h3>
+                <p>Accessibility, cultural safety, and multi-voice representation are not add-ons. They are foundational constraints that shape every design decision from the ground up (DR1, DR2, DR5).</p>
+              </div>
+              <div class="method-card">
+                <div class="method-num" style="color: var(--clr-accent-cool);">II</div>
+                <h3>Community-centred, not organisation-centred</h3>
+                <p>The platform exists to amplify community voices and facilitate connection, not to broadcast from an institutional position. Design must support user agency and participation (DR3, DR5).</p>
+              </div>
+              <div class="method-card">
+                <div class="method-num" style="color: var(--clr-accent);">III</div>
+                <h3>Simple, trustworthy, and fast</h3>
+                <p>Complex navigation, slow load times, and confusing layouts break trust. Simplicity is a commitment, not a compromise (DR4, DR6).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="page-nav-band">
+    <div class="container">
+      <a href="research.html" class="page-nav-link prev">← Research</a>
+      <a href="proposal.html" class="page-nav-link next">Design Proposal →</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>DECO7140 S1 2026 — A2 Research &amp; Proposal — Connected Communities Initiative</p>
+      <p>Roots &amp; Routes · South Asian Diaspora Platform Concept</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>

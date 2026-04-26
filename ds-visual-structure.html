@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Structure — Design System — Roots & Routes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/inner.css" />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/print.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Roots &amp; Routes</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="requirements.html">Requirements</a></li>
+      <li><a href="proposal.html">Proposal</a></li>
+      <li><a href="design-system.html" class="active">Design System</a></li>
+      <li><a href="components.html">Cards &amp; Type</a></li>
+      <li><a href="ai-reflection.html">AI Reflection</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <nav class="ds-breadcrumb" aria-label="Design system navigation">
+        <a href="design-system.html">Design System</a> <span aria-hidden="true">›</span> 01 Visual Structure
+      </nav>
+      <span class="tag">Design System · 01 of 07</span>
+      <h1>Visual Structure &amp; Layout</h1>
+      <p>Foundation for perception, hierarchy, and navigation — how the page is structured spatially.</p>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <nav class="ds-sub-nav" aria-label="Design system sections">
+        <a href="ds-visual-structure.html" class="ds-sub-link active">01 Structure</a>
+        <a href="ds-typography.html" class="ds-sub-link">02 Typography</a>
+        <a href="ds-colour.html" class="ds-sub-link">03 Colour</a>
+        <a href="ds-imagery.html" class="ds-sub-link">04 Imagery</a>
+        <a href="ds-interaction.html" class="ds-sub-link">05 Interaction</a>
+        <a href="ds-usability.html" class="ds-sub-link">06 Usability</a>
+        <a href="ds-meaning-trust.html" class="ds-sub-link">07 Meaning</a>
+      </nav>
+
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Grid System</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>The layout uses a <strong>12-column CSS grid</strong> with a maximum content width of 1200px and consistent horizontal padding — 32px on desktop, 16px on mobile. This is the same grid system used across professional web design (Bootstrap, Material Design).</p>
+            <p>Columns allow flexible content arrangements: full-width sections for heroes and bands; 2-column for content+sidebar; 3-column for card grids; single column on mobile.</p>
+            <div class="ds-demo-box">
+              <div class="grid-demo" aria-label="12-column grid visualisation">
+                <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+                <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+                <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+                <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+              </div>
+              <p class="ds-demo-label">12-column grid · max-width 1200px · gap 24px</p>
+            </div>
+            <div class="insight-box">
+              <span class="insight-label">Research link → DR6, F2</span>
+              <p>A consistent grid creates predictable spatial relationships, reducing cognitive load for older users (Sunita) who found existing platforms "too many things." Predictable structure = learnability.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Spacing &amp; Rhythm</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>All spacing uses a <strong>base-4 scale</strong> (4px, 8px, 16px, 24px, 32px, 48px, 64px, 96px, 128px). This creates visual rhythm — consistent distances between elements signal grouping and hierarchy without needing borders or background colours.</p>
+            <div class="spacing-demo">
+              <div class="sp-item" style="height:4px;" aria-label="4px spacing"></div>
+              <div class="sp-item" style="height:8px;"></div>
+              <div class="sp-item" style="height:16px;"></div>
+              <div class="sp-item" style="height:24px;"></div>
+              <div class="sp-item" style="height:32px;"></div>
+              <div class="sp-item" style="height:48px;"></div>
+              <div class="sp-item" style="height:64px;"></div>
+            </div>
+            <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-2);">
+              <span style="font-size:var(--fs-xs);color:var(--clr-text-muted);">4px</span>
+              <span style="font-size:var(--fs-xs);color:var(--clr-text-muted);">8px</span>
+              <span style="font-size:var(--fs-xs);color:var(--clr-text-muted);">16px</span>
+              <span style="font-size:var(--fs-xs);color:var(--clr-text-muted);">24px</span>
+              <span style="font-size:var(--fs-xs);color:var(--clr-text-muted);">32px</span>
+              <span style="font-size:var(--fs-xs);color:var(--clr-text-muted);">48px</span>
+              <span style="font-size:var(--fs-xs);color:var(--clr-text-muted);">64px</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Wireframe: Homepage Layout</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>The homepage uses a full-bleed hero, followed by alternating full-width and contained sections. This creates visual breathing room and prevents the "wall of content" that frustrated research participant Sunita (F2).</p>
+            <div class="wireframe-full" aria-label="Homepage wireframe diagram" role="img">
+              <!-- Nav bar -->
+              <div class="wf-section wf-nav">
+                <div class="wf-block wf-logo"></div>
+                <div style="display:flex;gap:8px;margin-left:auto;">
+                  <div class="wf-block" style="width:50px;height:10px;"></div>
+                  <div class="wf-block" style="width:50px;height:10px;"></div>
+                  <div class="wf-block" style="width:50px;height:10px;"></div>
+                  <div class="wf-block" style="width:70px;height:10px;"></div>
+                  <div class="wf-block" style="width:60px;height:10px;"></div>
+                </div>
+              </div>
+              <!-- Hero -->
+              <div class="wf-section wf-hero-block">
+                <div class="wf-block" style="width:30%;height:14px;opacity:0.4;"></div>
+                <div class="wf-block" style="width:70%;height:52px;margin-top:12px;"></div>
+                <div class="wf-block" style="width:55%;height:14px;margin-top:12px;opacity:0.5;"></div>
+                <div class="wf-block" style="width:40%;height:12px;margin-top:8px;opacity:0.4;"></div>
+                <div style="display:flex;gap:8px;margin-top:16px;">
+                  <div class="wf-block wf-btn-primary"></div>
+                  <div class="wf-block wf-btn-ghost"></div>
+                </div>
+                <div class="wf-label">Full-bleed hero section · strong heading hierarchy</div>
+              </div>
+              <!-- Stats band -->
+              <div class="wf-section wf-dark-band">
+                <div class="wf-block" style="width:40%;height:14px;opacity:0.3;"></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:12px;">
+                  <div class="wf-block" style="height:60px;opacity:0.2;border-radius:6px;"></div>
+                  <div class="wf-block" style="height:60px;opacity:0.2;border-radius:6px;"></div>
+                  <div class="wf-block" style="height:60px;opacity:0.2;border-radius:6px;"></div>
+                </div>
+                <div class="wf-label" style="color:rgba(255,255,255,0.5);">Context band · dark background · 3-col stats</div>
+              </div>
+              <!-- Card grid -->
+              <div class="wf-section">
+                <div class="wf-block" style="width:40%;height:18px;"></div>
+                <div class="wf-block" style="width:60%;height:12px;margin-top:8px;opacity:0.5;"></div>
+                <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:16px;">
+                  <div class="wf-block" style="height:80px;border-radius:6px;opacity:0.5;"></div>
+                  <div class="wf-block" style="height:80px;border-radius:6px;opacity:0.5;"></div>
+                  <div class="wf-block" style="height:80px;border-radius:6px;opacity:0.5;"></div>
+                  <div class="wf-block" style="height:80px;border-radius:6px;opacity:0.5;"></div>
+                  <div class="wf-block" style="height:80px;border-radius:6px;opacity:0.5;"></div>
+                </div>
+                <div class="wf-label">Page navigation cards · 5-column on desktop</div>
+              </div>
+              <!-- Footer -->
+              <div class="wf-section wf-footer-block">
+                <div class="wf-block" style="width:50%;height:10px;opacity:0.3;"></div>
+                <div class="wf-block" style="width:35%;height:10px;margin-top:6px;opacity:0.2;"></div>
+                <div class="wf-label" style="color:rgba(255,255,255,0.4);">Footer · dark · course details</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="content-aside">
+            <h2>Navigation Structure</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="content-body">
+            <p>Navigation is <strong>persistent</strong> (sticky top bar on desktop) and collapses to a <strong>hamburger drawer</strong> on mobile screens below 768px. Maximum navigation depth is 2 levels — a primary nav and one sub-level for the Design System pages.</p>
+            <p>Active page state uses both colour (terracotta underline) and underline — not colour alone — satisfying WCAG 1.4.1 (Use of Colour). A skip-to-content link is the first focusable element on every page (WCAG 2.4.1).</p>
+            <div class="nav-wireframe">
+              <div class="nwf-bar">
+                <div class="nwf-logo">Roots &amp; Routes</div>
+                <div class="nwf-links">
+                  <span>Home</span>
+                  <span>Research</span>
+                  <span>Requirements</span>
+                  <span>Proposal</span>
+                  <span class="nwf-active">Design System</span>
+                  <span>AI Reflection</span>
+                </div>
+              </div>
+              <div class="nwf-subnav">
+                <span class="nwf-active">01 Structure</span>
+                <span>02 Typography</span>
+                <span>03 Colour</span>
+                <span>04 Imagery</span>
+                <span>05 Interaction</span>
+                <span>06 Usability</span>
+                <span>07 Meaning</span>
+              </div>
+              <p class="ds-demo-label">Navigation wireframe · active state shown · max 2 levels</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="page-nav-band">
+    <div class="container">
+      <a href="design-system.html" class="page-nav-link prev">← Design System Index</a>
+      <a href="ds-typography.html" class="page-nav-link next">02 Typography →</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p>DECO7140 S1 2026 — A2 Research &amp; Proposal — Connected Communities Initiative</p>
+      <p>Roots &amp; Routes · South Asian Diaspora Platform Concept</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>

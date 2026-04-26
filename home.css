@@ -1,0 +1,305 @@
+/* =============================================
+   HOME PAGE CSS
+   ============================================= */
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 80% 20%, rgba(196,80,26,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 10% 80%, rgba(74,123,140,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(232,144,58,0.06) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 var(--space-8);
+  max-width: var(--max-w);
+  margin-inline: auto;
+  width: 100%;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.hero-title {
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: var(--fw-light);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--clr-primary);
+  margin-bottom: var(--space-8);
+}
+
+.hero-title em {
+  color: var(--clr-accent);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, var(--fs-lg));
+  color: var(--clr-text-muted);
+  max-width: 52ch;
+  line-height: var(--lh-loose);
+  margin-bottom: var(--space-12);
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: var(--space-8);
+  left: var(--space-8);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  animation: fadeUp 1.2s ease both;
+  z-index: 1;
+}
+
+/* ---- Overview ---- */
+.overview {
+  padding: var(--space-32) 0;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.overview-label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.overview-label span {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-light);
+  color: var(--clr-accent);
+  line-height: 1;
+}
+
+.overview-label hr {
+  border: none;
+  border-top: 1px solid var(--clr-border);
+}
+
+.overview-label p {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  max-width: none;
+}
+
+.overview-text h2 {
+  margin-bottom: var(--space-6);
+}
+
+.overview-text p + p {
+  margin-top: var(--space-4);
+}
+
+/* ---- Context Band ---- */
+.context-band {
+  background: var(--clr-primary);
+  padding: var(--space-24) 0;
+  color: var(--clr-white);
+}
+
+.context-band .section-title {
+  color: var(--clr-white);
+  margin-bottom: var(--space-4);
+}
+
+.context-band .section-intro {
+  color: rgba(253,250,245,0.65);
+  margin-bottom: var(--space-12);
+}
+
+.context-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+}
+
+.context-card {
+  border: 1px solid rgba(253,250,245,0.15);
+  padding: var(--space-8);
+  border-radius: var(--radius-md);
+  background: rgba(253,250,245,0.04);
+  transition: background var(--trans-normal);
+}
+
+.context-card:hover {
+  background: rgba(253,250,245,0.08);
+}
+
+.card-num {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semi);
+  color: var(--clr-accent-warm);
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.context-card p {
+  font-size: var(--fs-sm);
+  color: rgba(253,250,245,0.7);
+  line-height: var(--lh-loose);
+  max-width: none;
+}
+
+/* ---- Site Map ---- */
+.site-map-section {
+  padding: var(--space-32) 0;
+}
+
+.page-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.page-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  transition: all var(--trans-normal);
+  cursor: pointer;
+}
+
+.page-card:hover {
+  border-color: var(--clr-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.page-icon {
+  font-size: var(--fs-xl);
+  color: var(--clr-accent);
+}
+
+.page-card h3 {
+  font-size: var(--fs-lg);
+  color: var(--clr-primary);
+}
+
+.page-card p {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+  line-height: var(--lh-normal);
+}
+
+/* ---- Audience ---- */
+.audience-section {
+  padding: var(--space-24) 0 var(--space-32);
+  background: var(--clr-bg-alt);
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.audience-card {
+  padding: var(--space-12);
+  border-radius: var(--radius-lg);
+}
+
+.audience-card.primary {
+  background: var(--clr-accent);
+  color: var(--clr-white);
+}
+
+.audience-card.secondary {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+}
+
+.audience-card h3 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-4);
+}
+
+.audience-card.primary h3 { color: var(--clr-white); }
+.audience-card.secondary h3 { color: var(--clr-primary); }
+
+.audience-card p {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-loose);
+  margin-bottom: var(--space-6);
+  max-width: none;
+}
+
+.audience-card.primary p { color: rgba(253,250,245,0.85); }
+
+.audience-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.audience-card ul li {
+  font-size: var(--fs-sm);
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.audience-card ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: 0.5;
+}
+
+.audience-card.primary ul li { color: rgba(253,250,245,0.8); }
+.audience-card.secondary ul li { color: var(--clr-text-muted); }
+
+/* ---- Animation ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .overview-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .hero-title { font-size: clamp(3rem, 15vw, 5rem); }
+}
